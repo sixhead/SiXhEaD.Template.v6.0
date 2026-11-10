@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>$title</title>
+<link rel="stylesheet" href="module/bootstrap/bootstrap.min.css">
+</head>
+<body>
+
+<div class="container">
+    <h3>$title</h3>
+    
+    <!--SiXhEaD:firefox-->
+    <div class="panel panel-warning">
+        <div class="panel-heading">สวัสดี Firefox</div>
+        <div class="panel-body">$user_agent</div>
+    </div>
+    <!--/SiXhEaD:firefox-->
+
+    <!--SiXhEaD:chrome-->
+    <div class="panel panel-info">
+        <div class="panel-heading">สวัสดี Chrome</div>
+        <div class="panel-body">$user_agent</div>
+    </div>
+    <!--/SiXhEaD:chrome-->
+
+    <!--SiXhEaD:never-see-me-->
+    <div>คุณจะไม่เห็นข้อความนี้</div>
+    <!--/SiXhEaD:never-see-me-->
+
+    <ul class="list-group">
+        <!--SiXhEaD:data1-->
+        <li class="list-group-item $active">$no</li>
+        <!--/SiXhEaD:data1-->
+    </ul>
+
+    <div class="row">
+        <!--SiXhEaD:data2-->
+        <div class="col-md-3"><div class="alert alert-$css">$css_uc</div></div>
+        <!--/SiXhEaD:data2-->
+    </div>
+</div>
+
+<script src="module/jquery/jquery.min.js"></script>
+<script src="module/bootstrap/bootstrap.min.js"></script>
+</body>
+</html>

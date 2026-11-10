@@ -1,0 +1,29 @@
+<?php
+require 'module/SiXhEaD.Template.php';
+
+$tp = new Template('_tp_loop-in-loop.html', 'butterfly');
+
+$title = 'วิธีใช้งาน ซ้อน loop';
+
+$tp->block('items1');
+$styles = ['danger', 'info'];
+foreach ($styles as $key => $css) {
+    $item = '';
+    for ($no = 1; $no < 3; $no++) {
+        $item .= $tp->applyBlock('item');
+    }
+    $tp->apply();
+}
+
+$tp->block('items2');
+$styles = ['success', 'warning'];
+foreach ($styles as $key => $css) {
+    $item = '';
+    for ($no = 1; $no < 3; $no++) {
+        $item .= $tp->applyBlock('item');
+    }
+    $tp->apply();
+}
+
+$tp->display();
+exit;
